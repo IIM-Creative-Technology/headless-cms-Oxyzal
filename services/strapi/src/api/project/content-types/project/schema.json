@@ -29,6 +29,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology",
+      "mappedBy": "projects"
     }
   }
 }

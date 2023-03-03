@@ -3,3 +3,7 @@
         {{ $route.params.slug }}
     </div>
 </template>
+
+<script>    
+
+</script>

@@ -8,6 +8,6 @@
     ],
     "scripts": {
         "start-nuxt": "yarn workspace nuxt dev",
-        "start-strapi": "yarn workspace headless-scrapi develop"
+        "start-strapi": "yarn workspace headless-strapi develop"
     }
 }

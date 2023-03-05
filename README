@@ -1,0 +1,31 @@
+# Weather App
+
+## Introduction
+The goal of this project is to create a portfolio where is all my project.
+
+## Technologies Used
+- [Strapi](https://reactnative.dev/)
+- [Nuxt](https://axios-http.com/fr/docs/intro)
+
+## Features
+- See all my projects
+- Have a link of my project who there are publish
+
+
+## Installation
+ - Clone this repository
+``` git clone git@github.com:IIM-Creative-Technology/headless-cms-Oxyzal.git```
+
+- Install the dependencies
+``` yarn install ```
+
+- Create a .env file in the root directory and add your API key:
+``` KEY=your_api_key_here  ``` ect ....
+
+- Run the app
+With 2 different cmd
+``` yarn start-strapi ```
+``` yarn start-nuxt ```
+
+## Contributors
+- [Madi Steven](https://github.com/Oxyzal)

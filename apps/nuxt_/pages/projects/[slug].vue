@@ -1,9 +1,10 @@
 <template>
+    
     <div v-if="project" class="flex flex-col items-center mt-8">
   <h1 class="text-4xl font-bold">{{ project.name }}</h1>
   <div class="flex flex-col sm:flex-row mt-4">
     <img :src=" project.image.url " alt="{{ project.name }}" class="w-full sm:w-1/3">
-    <div class="flex flex-col sm:ml-8 mt-4 sm:mt-0 sm:w-2/3 justify-center">
+    <div class="flex flex-col sm:ml-8 mt-4 sm:mt-0 sm:w-2/3 justify-center mx-auto">
       <p class="text-lg">{{ project.description }}</p>
       <div class="mt-4 flex flex-wrap">
         <div v-for="technology in project.technologies" :key="technology.id" class="m-2">
@@ -24,6 +25,7 @@
     </div>
   </div>
 </div>
+
 </template>
 
 <script setup>    

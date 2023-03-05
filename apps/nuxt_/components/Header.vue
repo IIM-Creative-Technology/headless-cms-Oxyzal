@@ -4,9 +4,10 @@
             <div class="flex items-center justify-between h-16">
                 <h1 class="text-white font-bold text-xl">Oxyzal</h1>
                 <ul class="flex items-center">
-                    <li><a href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About me</a></li>
-                    <li><a href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">My projects</a></li>
-
+                    <li><nuxt-link to="/" href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tous les projets</nuxt-link></li>
+                    <li><nuxt-link to="/" href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> Perso</nuxt-link></li>
+                    <li><nuxt-link to="/" href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> Pro</nuxt-link></li>
+                    <li><nuxt-link to="/" tag="iim" href="" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> IIM</nuxt-link></li>
                 </ul>
             </div>
         </nav>

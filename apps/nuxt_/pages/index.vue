@@ -11,6 +11,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 w-[90%] mx-auto mt-20">
+        <h2>Tous mes projets</h2>
         <div v-for="project in projects.data" :key="project.id" class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 ease-in-out">
             <nuxt-link :to=" '/projects/' + project.slug">
             <div class="relative overflow-hidden">

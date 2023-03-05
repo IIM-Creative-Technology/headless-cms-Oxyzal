@@ -46,6 +46,9 @@
         "Perso",
         "IIM"
       ]
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

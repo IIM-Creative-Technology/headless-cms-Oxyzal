@@ -1,12 +1,44 @@
 <template>
-    <h1 class="bg-red-200">Hello world</h1>
-    <nuxt-link :to=" '/projects/' + project.slug" v-for="project in projects.data" :key="project.id"> 
-        <pre>{{  project.name }}</pre>
-    </nuxt-link>
+   <div class="flex items-center justify-center mt-10">
+        <img class="rounded-full w-32 h-32 object-cover object-center mr-4" src="https://myuhziihakeikxhaporj.supabase.co/storage/v1/object/public/strapi-uploads/moi.jpg-1aab2f28577dbe6af5bb058ccd1f4d4f.jpg?updated_at=2023-03-03T19:25:10.927Z" alt="Photo de profil">
+        <div class="text-center">
+            <p class="text-3xl font-bold">Madi Steven</p>
+            <p lass="text-3xl">Developpeur full-stack junior</p>
+            <div class="mt-2">
+                <a href="https://oxyzal.github.io/Portfolio/" class="text-gray-500 hover:text-black transition duration-500">Mon site internet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 w-[90%] mx-auto mt-20">
+        <div v-for="project in projects.data" :key="project.id" class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 ease-in-out">
+            <nuxt-link :to=" '/projects/' + project.slug">
+            <div class="relative overflow-hidden">
+                <img :src="project.image.url" alt="" class="w-full h-48 sm:h-56 md:h-64 object-cover object-center">
+                <div class="absolute bottom-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-90 transition duration-300 ease-in-out">
+                <div class="px-4 py-2 sm:px-6">
+                    <h3 class="text-white font-bold text-lg sm:text-xl mb-2">{{ project.name }}</h3>
+                    <p class="text-gray-200 text-sm sm:text-base">{{ project.description }}</p>
+                    <div class="mt-4">
+                    <div v-for="technology in project.technologies" :key="technology.id" class="inline-block mr-2">
+                        <img :src="technology.logo.url" alt="" class="w-4 h-4 sm:w-6 sm:h-6 object-contain">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </nuxt-link>
+        </div>
+    </div>
+
+
+    
 </template>
 
 <script setup>
     const {find} = useStrapi();
     const projects = await find('projects', {populate:'deep'});
     console.log(projects);
+
+    
 </script>

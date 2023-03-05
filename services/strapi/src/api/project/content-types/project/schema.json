@@ -12,9 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Test": {
+    "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -35,6 +35,17 @@
       "relation": "manyToMany",
       "target": "api::technology.technology",
       "mappedBy": "projects"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Pro",
+        "Perso",
+        "IIM"
+      ]
     }
   }
 }
